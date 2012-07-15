@@ -9,7 +9,7 @@ Usage
  to your .repo/local_manifest.xml
 
 - Make sure I89ed0f00eda1a0bebbc35f39af4bbf0e97f6fade from CyanogenMod is
-  applied to your build/ directory
+  applied to your build/ directory (see http://review.cyanogenmod.com/19152).
 
 
 Building
