@@ -1,0 +1,8 @@
+toolchain/binutils.git           4f7a86c0b53a80a21dae1015f6d6b857ed6e02ed Fix a gold bug.
+toolchain/build.git              5ef7fa6f214e96660a9b16343fea904831e5e6e2 Update build scripts
+toolchain/gcc.git                872d5db7c3471a9d7fa78a290f84eb13b13f587a Backport r184357 from trunk
+toolchain/gdb.git                d3fbc74c42021bf9d385a3d3b8813d0d91318137 Release gdb-7.3.x source for Android toolchain.
+toolchain/gmp.git                c366710569455a890f2e9575b5dba86d380a8416 add gmp-4.3.2.tar.bz2
+toolchain/gold.git               8d401cf711539af5a2f78d12447341d774892618 Empty initial commit.
+toolchain/mpfr.git               bde731396c38c8d5b0bca800aace6a690d0d2978 add mpfr-2.4.2.tar.bz2
+toolchain/mpc.git                a4109ccc6e07f72f41c397a17fdfbed3e5e19c66 Add mpc-0.8.1 package to toolchain source.
