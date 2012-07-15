@@ -1,0 +1,29 @@
+Linux/x86 32-bit gcc/binutils for arm-linux-androideabi-4.6
+
+Usage
+=====
+- Put
+  <project
+    name="yath/android_prebuilts_gcc_linux-x86-32_arm_arm-linux-androideabi-4.6"
+    path="prebuilts/gcc/linux-x86-32/arm/arm-linux-androideabi-4.6" />
+ to your .repo/local_manifest.xml
+
+- Make sure I89ed0f00eda1a0bebbc35f39af4bbf0e97f6fade from CyanogenMod is
+  applied to your build/ directory
+
+
+Building
+========
+A=$ANDROID_BUILD_TOP
+TC=/tmp/toolchain-source
+cd $A/ndk/build/tools
+./download-toolchain-sources.sh $TC
+cd $TC
+git clone https://android.googlesource.com/toolchain/mpc # this one is missing from download-toolchain-sources.sh
+# fix SOURCES to reflect mpc
+cd $A/ndk/build/tools
+# set DEFAULT_BINUTILS_VERSION=2.21 in dev-defaults.sh - binutils 2.19 don't support the 'orn' instruction and
+# you will get an assembler error when compiling
+./gen-platforms.sh --minimal
+./build-gcc.sh $TC $A/ndk arm-linux-androideabi-4.6
+# find your output in $A/ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86
